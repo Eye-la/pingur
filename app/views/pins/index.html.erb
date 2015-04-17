@@ -1,0 +1,16 @@
+<h1>Pins</h1>
+
+<%= link_to "Add New Pin", "/pins/new" %>
+
+<% @pins.each do |pin| %>
+
+  <div>
+    <%= link_to image_tag(pin.url), "/pins/#{pin.id}" %>
+  </div>
+  <div>
+  <%= pin.title %><br>
+  <%= pin.author %><br>
+  Rating: <%= pin.rating %><br>
+  <%= pin.note %>
+  </div>
+<% end %>

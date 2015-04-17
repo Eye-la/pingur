@@ -1,0 +1,12 @@
+<%= link_to "Back to Pins", pins_url %> | <%= link_to "Edit", edit_pin_path(@pin) %> | <%= link_to "Delete", @pin, method: :delete, data: {confirm: "Are you sure you want to delete the pin?"} %>
+
+<div>
+  <%= image_tag @pins_url %>
+</div>
+<div>
+  <%= @pin.title %><br>
+  <%= @pin.author %><br>
+  Rating: <%= @pin.rating %><br>
+  <%= @pin.note %>
+</div>
+
